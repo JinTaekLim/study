@@ -1,0 +1,14 @@
+#springdoc:
+#  swagger-ui:
+#    path: /swagger  # 접속 경로
+#  paths-to-match:
+#    - /**           # 문서화 할 API 경로
+#
+#
+#
+#
+#
+#
+#
+#
+##      groups-order: DESC # 내림차순r
