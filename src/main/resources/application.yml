@@ -3,12 +3,18 @@ spring:
     import: classpath:application-secret.yml
   profiles:
     active: local
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
 
 server:
   error:
     include-message: never
     whitelabel:
       enabled: false
+
 
 
 
