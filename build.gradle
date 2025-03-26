@@ -25,14 +25,18 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0'
 
 	// MySQL
-	runtimeOnly 'com.mysql:mysql-connector-j:8.3.0'
+//	runtimeOnly 'com.mysql:mysql-connector-j:8.3.0'
 
 	// Lombok
 	compileOnly 'org.projectlombok:lombok:1.18.34'
 	annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
 	// JPA
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.3'
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.3'
+
+	// Kafka
+//	implementation("org.springframework.kafka:spring-kafka:4.0.0-M1")
+	implementation("org.springframework.kafka:spring-kafka:3.3.4")
 
 	// Test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
