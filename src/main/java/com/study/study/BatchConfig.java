@@ -3,7 +3,7 @@ package com.study.study;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.JobScope;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -16,7 +16,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
 @RequiredArgsConstructor
-@EnableBatchProcessing
 public class BatchConfig {
 
   private final ItemReader<Integer> itemReader;
@@ -33,6 +32,7 @@ public class BatchConfig {
   }
 
   @Bean
+  @JobScope
   public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
     return new StepBuilder("step1", jobRepository)
         .<Integer, Integer>chunk(2, transactionManager)
