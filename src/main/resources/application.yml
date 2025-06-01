@@ -9,8 +9,14 @@ server:
     include-message: never
     whitelabel:
       enabled: false
-
-
+  tomcat:
+    mbeanregistry:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 springdoc:
   swagger-ui:
